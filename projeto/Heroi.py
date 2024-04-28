@@ -1,3 +1,4 @@
+import random
 from Personagem import Personagem
 
 class Heroi(Personagem):
@@ -12,6 +13,6 @@ class Heroi(Personagem):
     return f"{super().exibir_detalhes()}\nHabilidade: {self.get_habilidade()}\n"
 
   def ataque_especial(self,alvo):
-    dano = self.get_nivel() *  5
+    dano = random.randint(self.get_nivel() * 5, self.get_nivel() * 8) # Dano aumentado
     alvo.receber_ataque(dano)
     print(f"{self.get_nome()} usou a habilidade especial {self.get_habilidade()} em {alvo.get_nome()} e causou {dano} de dano!")

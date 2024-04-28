@@ -1,6 +1,7 @@
 #Personagem classe mae
 #Heroi: controloado pelo usuario
 #Inimigo adversário do usuário
+import random
 from Heroi import Heroi
 from  Inimigo import  Inimigo
 class Jogo:
